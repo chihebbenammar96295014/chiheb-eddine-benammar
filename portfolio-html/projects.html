@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Mohamed Chiheb</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/projects.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Mohamed Chiheb Eddine</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="projects">
+            <div class="projects__header">
+                <h2 class="projects__title">My Projects</h2>
+                <p class="projects__subtitle">Discover my achievements and development experiences</p>
+            </div>
+            <div class="projects__filters">
+                <button class="filter-btn active" data-filter="all"><i class="fa-solid fa-layer-group"></i> All</button>
+                <button class="filter-btn" data-filter="Web"><i class="fa-solid fa-globe"></i> Web</button>
+                <button class="filter-btn" data-filter="AI"><i class="fa-solid fa-brain"></i> AI</button>
+                <button class="filter-btn" data-filter="Data"><i class="fa-solid fa-database"></i> Data</button>
+                <button class="filter-btn" data-filter="Game"><i class="fa-solid fa-gamepad"></i> Game</button>
+                <button class="filter-btn" data-filter="Embedded"><i class="fa-solid fa-microchip"></i>
+                    Embedded</button>
+                <button class="filter-btn" data-filter="Frontend"><i class="fa-solid fa-desktop"></i> Frontend</button>
+                <button class="filter-btn" data-filter="Fullstack"><i class="fa-solid fa-layer-group"></i>
+                    Fullstack</button>
+                <button class="filter-btn" data-filter="Python"><i class="fa-brands fa-python"></i> Python</button>
+            </div>
+            <div class="projects__grid">
+                <!-- Projet WorkWave -->
+                <div class="project-card" data-categories="Web,Fullstack,PHP,MySQL,HTML5,CSS3,JavaScript">
+                    <div class="project-card__media">
+                        <div class="project-card__img-wrap">
+                            <img src="assets/workWave/logo.png" alt="Projet WorkWave" class="project-card__img" />
+                        </div>
+                        <div class="project-card__categories">
+                            <span class="project-card__category">Web</span>
+                            <span class="project-card__category">Fullstack</span>
+                        </div>
+                    </div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title"><i class="fa-solid fa-brain project-title-icon"></i> WorkWave
+                            Project (ENISO)</h3>
+                        <p class="project-card__desc">Web platform for freelancers and companies. Project management,
+                            profiles, matching.</p>
+                        <div class="project-card__stack">
+                            <span class="project-card__badge" style="background:#777bb4"><i
+                                    class="fa-brands fa-php"></i> PHP</span>
+                            <span class="project-card__badge" style="background:#4479a1"><i
+                                    class="fa-solid fa-database"></i> MySQL</span>
+                            <span class="project-card__badge" style="background:#e44d26"><i
+                                    class="fa-brands fa-html5"></i> HTML5</span>
+                            <span class="project-card__badge" style="background:#1572b6"><i
+                                    class="fa-brands fa-css3-alt"></i> CSS3</span>
+                            <span class="project-card__badge" style="background:#f7df1e"><i class="fa-brands fa-js"></i>
+                                JavaScript</span>
+                        </div>
+                        <div class="project-card__actions">
+                            <button
+                                onclick="openMediaModal('video', 'assets/workWave/video-workWave.mp4', 'Projet WorkWave (ENISO)')"
+                                class="project-card__btn project-card__btn--demo">
+                                <i class="fa-solid fa-play"></i> View Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Projet Medical Chatbot -->
+                <div class="project-card" data-categories="AI,Web,Angular,Spring Boot,Python,Rasa">
+                    <div class="project-card__media">
+                        <div class="project-card__img-wrap">
+                            <img src="assets/consultEase/consultEase-home.png" alt="Projet Medical Chatbot"
+                                class="project-card__img" />
+                        </div>
+                        <div class="project-card__categories">
+                            <span class="project-card__category">AI</span>
+                            <span class="project-card__category">Web</span>
+                            <span class="project-card__category">Fullstack</span>
+                        </div>
+                    </div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title"><i class="fa-solid fa-brain project-title-icon"></i> PROJECT
+                            MEDICAL CHATBOT</h3>
+                        <p class="project-card__desc">Medical pre-diagnosis system with appointment booking, AI chatbot
+                            (Rasa), web interface.</p>
+                        <div class="project-card__stack">
+                            <span class="project-card__badge" style="background:#dd0031"><i
+                                    class="fa-brands fa-angular"></i> Angular</span>
+                            <span class="project-card__badge" style="background:#6db33f"><i
+                                    class="fa-solid fa-leaf"></i> Spring Boot</span>
+                            <span class="project-card__badge" style="background:#3776ab"><i
+                                    class="fa-brands fa-python"></i> Python</span>
+                            <span class="project-card__badge" style="background:#5d5dff"><i
+                                    class="fa-solid fa-robot"></i> Rasa</span>
+                        </div>
+                        <div class="project-card__actions">
+                            <button
+                                onclick="openMediaModal('video', 'assets/consultEase/video-consultEase.mp4', 'Projet Medical Chatbot')"
+                                class="project-card__btn project-card__btn--demo">
+                                <i class="fa-solid fa-play"></i> View Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Projet Tic-Tac-Toe Game -->
+                <div class="project-card" data-categories="Game,Python">
+                    <div class="project-card__media">
+                        <div class="project-card__img-wrap">
+                            <img src="assets/jeux xo/jeuxo.png" alt="Projet Tic-Tac-Toe Game"
+                                class="project-card__img" />
+                        </div>
+                        <div class="project-card__categories">
+                            <span class="project-card__category">Game</span>
+                            <span class="project-card__category">Python</span>
+                        </div>
+                    </div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title"><i class="fa-solid fa-gamepad project-title-icon"></i> project
+                            Tic-Tac-Toe Game</h3>
+                        <p class="project-card__desc">Interactive game coded in Python, score management, simple
+                            interface.</p>
+                        <div class="project-card__stack">
+                            <span class="project-card__badge" style="background:#3776ab"><i
+                                    class="fa-brands fa-python"></i> Python</span>
+                        </div>
+                        <div class="project-card__actions">
+                            <button
+                                onclick="openMediaModal('video', 'assets/jeux xo/jeu XO.mp4', 'Projet Tic-Tac-Toe Game')"
+                                class="project-card__btn project-card__btn--demo">
+                                <i class="fa-solid fa-play"></i> View Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Projet Site ENISO -->
+                <div class="project-card" data-categories="Web,Frontend,React,HTML5,CSS3,JavaScript">
+                    <div class="project-card__media">
+                        <div class="project-card__img-wrap">
+                            <img src="assets/Eniso-Team/logo.png" alt="Projet Site ENISO" class="project-card__img" />
+                        </div>
+                        <div class="project-card__categories">
+                            <span class="project-card__category">Web</span>
+                            <span class="project-card__category">Frontend</span>
+                        </div>
+                    </div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title"><i class="fa-solid fa-globe project-title-icon"></i> project
+                            website ENISO</h3>
+                        <p class="project-card__desc">Showcase website for ENISO, presentation of activities and clubs.
+                        </p>
+                        <div class="project-card__stack">
+                            <span class="project-card__badge" style="background:#61dafb"><i
+                                    class="fa-brands fa-react"></i> React</span>
+                            <span class="project-card__badge" style="background:#e44d26"><i
+                                    class="fa-brands fa-html5"></i> HTML5</span>
+                            <span class="project-card__badge" style="background:#1572b6"><i
+                                    class="fa-brands fa-css3-alt"></i> CSS3</span>
+                            <span class="project-card__badge" style="background:#f7df1e"><i class="fa-brands fa-js"></i>
+                                JavaScript</span>
+                        </div>
+                        <div class="project-card__actions">
+                            <button
+                                onclick="openMediaModal('video', 'assets/Eniso-Team/magazin_eniso.mp4', 'Projet Site ENISO')"
+                                class="project-card__btn project-card__btn--demo">
+                                <i class="fa-solid fa-play"></i> View Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Data Analysis Project -->
+                <div class="project-card" data-categories="Data,Python,Pandas,Matplotlib,Seaborn">
+                    <div class="project-card__media">
+                        <div class="project-card__img-wrap">
+                            <img src="assets/analyse/photo-analyse.png" alt="Data Analysis Project"
+                                class="project-card__img" />
+                        </div>
+                        <div class="project-card__categories">
+                            <span class="project-card__category">Data</span>
+                            <span class="project-card__category">Python</span>
+                        </div>
+                    </div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title"><i class="fa-solid fa-database project-title-icon"></i> Data
+                            Analysis Project</h3>
+                        <p class="project-card__desc">Conducted data cleaning, visualization, and insight extraction
+                            using Python (Pandas, Matplotlib, Seaborn).</p>
+                        <div class="project-card__stack">
+                            <span class="project-card__badge" style="background:#3776ab"><i
+                                    class="fa-brands fa-python"></i> Python</span>
+                            <span class="project-card__badge" style="background:#150458"><i
+                                    class="fa-solid fa-database"></i> Pandas</span>
+                            <span class="project-card__badge" style="background:#11557c"><i
+                                    class="fa-solid fa-chart-line"></i> Matplotlib</span>
+                            <span class="project-card__badge" style="background:#43b7ba"><i
+                                    class="fa-solid fa-water"></i> Seaborn</span>
+                        </div>
+                        <div class="project-card__actions">
+                            <button
+                                onclick="openMediaModal('image', 'assets/analyse/photo-analyse.png', 'Data Analysis Project')"
+                                class="project-card__btn project-card__btn--demo">
+                                <i class="fa-solid fa-image"></i> View Image
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Speed Interface for Aircraft -->
+                <div class="project-card" data-categories="Embedded,C++,Qt">
+                    <div class="project-card__media">
+                        <div class="project-card__img-wrap">
+                            <img src="assets/avionav-speed/avionav.png" alt="Speed Interface for Aircraft"
+                                class="project-card__img" />
+                        </div>
+                        <div class="project-card__categories">
+                            <span class="project-card__category">Embedded</span>
+                            <span class="project-card__category">C++</span>
+                        </div>
+                    </div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title"><i class="fa-solid fa-microchip project-title-icon"></i> Speed
+                            Interface for Aircraft</h3>
+                        <p class="project-card__desc">Developed a high-performance speed interface for aircraft systems
+                            using Qt and C++.</p>
+                        <div class="project-card__stack">
+                            <span class="project-card__badge" style="background:#41cd52"><i
+                                    class="fa-solid fa-cube"></i> Qt</span>
+                            <span class="project-card__badge" style="background:#00599c"><i
+                                    class="fa-solid fa-code"></i> C++</span>
+                        </div>
+                        <div class="project-card__actions">
+                            <button
+                                onclick="openMediaModal('image', 'assets/avionav-speed/avionav.png', 'Speed Interface for Aircraft')"
+                                class="project-card__btn project-card__btn--demo">
+                                <i class="fa-solid fa-image"></i> View Image
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal pour médias -->
+            <div id="mediaModal" class="media-modal">
+                <div class="media-modal__content">
+                    <button class="media-modal__close" onclick="closeMediaModal()">&times;</button>
+                    <h3 id="mediaModalTitle" class="media-modal__title"></h3>
+                    <div id="mediaModalMedia" class="media-modal__media"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/chiheb-benammar/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100004474756575" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/chiheb_benammar/" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+            <blockquote style="color:#bfc9d1;font-style:italic;margin:1.5rem 0;">"Success is not the key to happiness.
+                Happiness is the key to success."</blockquote>
+            <div style="color:#bfc9d1;">Mohamed Chiheb Eddine</div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script>
+        // Gestion du modal média
+        function openMediaModal(type, url, title) {
+            document.getElementById('mediaModal').style.display = 'block';
+            document.getElementById('mediaModalTitle').innerText = title;
+            let html = '';
+            if (type === 'video') {
+                html = `<video controls style='width:100%;border-radius:1rem;'><source src='${url}' type='video/mp4'>Votre navigateur ne supporte pas la vidéo.</video>`;
+            } else if (type === 'image') {
+                html = `<img src='${url}' alt='${title}' style='width:100%;border-radius:1rem;' />`;
+            }
+            document.getElementById('mediaModalMedia').innerHTML = html;
+        }
+        function closeMediaModal() {
+            document.getElementById('mediaModal').style.display = 'none';
+            document.getElementById('mediaModalMedia').innerHTML = '';
+        }
+        window.onclick = function (event) {
+            const modal = document.getElementById('mediaModal');
+            if (event.target === modal) closeMediaModal();
+        }
+        // Filtrage dynamique des projets (robuste)
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const filter = this.getAttribute('data-filter').toLowerCase();
+                document.querySelectorAll('.project-card').forEach(card => {
+                    const cats = card.getAttribute('data-categories')
+                        .split(',')
+                        .map(c => c.trim().toLowerCase());
+                    if (filter === 'all' || cats.includes(filter)) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
