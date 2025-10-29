@@ -4,6 +4,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader, provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +23,7 @@ import { InterestsComponent } from './shared/interests/interests.component';
 import { LanguagesComponent } from './shared/languages/languages.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { SkillsComponent } from './shared/skills/skills.component';
+import { TranslationService } from './services/translation.service';
 
 @NgModule({
   declarations: [
@@ -45,9 +49,16 @@ import { SkillsComponent } from './shared/skills/skills.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     CommonModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: provideTranslateHttpLoader({
+        prefix: './assets/i18n/',
+        suffix: '.json'
+      })
+    })
   ],
-  providers: [],
+  providers: [TranslationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

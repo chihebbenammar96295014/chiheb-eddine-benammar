@@ -1,26 +1,15 @@
 .projects {
   padding: 4rem 2rem;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
+  background: var(--background-primary);
 
   &__header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
   }
 
-  &__title {
-    font-size: 2.5rem;
-    color: #1976d2;
-    margin-bottom: 1rem;
-    font-weight: 700;
-  }
-
-  &__subtitle {
-    font-size: 1.1rem;
-    color: #666;
-    max-width: 600px;
-    margin: 0 auto;
-  }
+  /* Projects title and subtitle now use the standardized section-title and section-subtitle classes */
 
   &__filters {
     display: flex;
@@ -29,55 +18,63 @@
     gap: 1rem;
     margin-bottom: 3rem;
   }
+  .skill-card--empty {
+  visibility: hidden;
+}
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
     padding: 1rem;
   }
 }
 
 .filter-btn {
-  padding: 0.8rem 1.5rem;
-  border: 2px solid #1976d2;
-  border-radius: 50px;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--accent-color);
+  border-radius: 2rem;
   background: transparent;
-  color: #1976d2;
+  color: var(--accent-color);
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-size: 0.95rem;
 
   i {
     font-size: 1.1rem;
   }
 
   &:hover {
-    background: #1976d2;
-    color: white;
+    background: var(--accent-color);
+    color: var(--text-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
   }
 
   &.active {
-    background: #1976d2;
-    color: white;
+    background: var(--accent-color);
+    color: var(--text-light);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
   }
 }
 
 .project-card {
-  background: white;
-  border-radius: 15px;
+  background: var(--background-primary);
+  border-radius: 1.5rem;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
   animation: fadeInUp 0.5s ease forwards;
   opacity: 0;
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
   }
 
   &__media {
@@ -110,10 +107,10 @@
   }
 
   &__category {
-    background: rgba(25, 118, 210, 0.9);
-    color: white;
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
+    background: var(--accent-color);
+    color: var(--text-light);
+    padding: 0.4rem 1rem;
+    border-radius: 1rem;
     font-size: 0.8rem;
     font-weight: 500;
   }
@@ -293,4 +290,67 @@
     max-height: 70vh;
     border-radius: 10px;
   }
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &__content {
+    flex: 1; /* Pour que le contenu prenne tout l’espace disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pousse les boutons vers le bas */
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: auto; /* Aligne les boutons en bas */
+    min-height: 60px; /* <-- Ajuste la hauteur selon ton design */
+  }
+
+  &__btn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    height: 45px; /* <-- Garde les boutons uniformes */
+  }
+}
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  align-items: stretch; /* 🔥 Toutes les cartes auront la même hauteur */
+}
+@media (max-width: 768px) {
+  .project-card__actions {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .project-card__btn {
+    width: 100%;
+  }
+}
+.project-card__btn--demo:hover {
+  background: #1565c0; /* version plus sombre du bleu */
+}
+
+.project-card__btn:not(.project-card__btn--demo):hover {
+  background: #e0e0e0;
+}
+.project-card__title {
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
 }

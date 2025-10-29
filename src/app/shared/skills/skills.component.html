@@ -1,14 +1,17 @@
 <section class="skills">
-  <h2 class="skills__title">My Skills</h2>
+  <h2 class="section-title">{{ 'sections.skills' | translate }}</h2>
   <div class="skills__categories">
     <div *ngFor="let category of categories" class="skills__category">
-      <h3 class="skills__category-title">{{ category.label }}</h3>
+      <h3 class="section-subtitle">{{ category.label }}</h3>
       <div class="skills__list">
         <div class="skill-card" *ngFor="let skill of category.skills" [ngStyle]="{'--skill-color': skill.color}">
           <i [class]="skill.icon" class="skill-card__icon"></i>
           <span class="skill-card__name">{{ skill.name }}</span>
         </div>
+
       </div>
+      
+      
     </div>
   </div>
 </section>

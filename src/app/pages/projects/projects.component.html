@@ -1,7 +1,7 @@
 <section class="projects">
   <div class="projects__header">
-    <h2 class="projects__title">My Projects</h2>
-    <p class="projects__subtitle">Discover my achievements and development experiences</p>
+    <h2 class="section-title">{{ 'projects.title' | translate }}</h2>
+    <p class="section-subtitle">{{ 'projects.subtitle' | translate }}</p>
   </div>
 
   <div class="projects__filters">
@@ -43,7 +43,7 @@
           <button *ngIf="project.mediaUrl" (click)="openProjectMedia(project)"
             class="project-card__btn project-card__btn--demo">
             <i class="fa-solid fa-play"></i>
-            View Demo
+            {{ 'projects.items.viewDemo' | translate }}
           </button>
         </div>
       </div>

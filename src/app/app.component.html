@@ -1,5 +1,28 @@
 <app-navbar></app-navbar>
-<main [@routeAnimations]="prepareRoute(outlet)">
-  <router-outlet #outlet="outlet"></router-outlet>
+<main>
+  <!-- Section Home -->
+  <section id="home" class="section">
+    <app-home></app-home>
+  </section>
+
+  <!-- Section About -->
+  <section id="about" class="section">
+    <app-about></app-about>
+  </section>
+
+  <!-- Section Services -->
+  <section id="services" class="section">
+    <app-services></app-services>
+  </section>
+
+  <!-- Section Projects -->
+  <section id="projects" class="section">
+    <app-projects></app-projects>
+  </section>
+
+  <!-- Section Contact -->
+  <section id="contact" class="section">
+    <app-contact></app-contact>
+  </section>
 </main>
 <app-footer></app-footer>

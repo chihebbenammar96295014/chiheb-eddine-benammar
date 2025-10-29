@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 interface Education {
   school: string;
@@ -7,6 +8,7 @@ interface Education {
   specialty: string;
   icon: string;
   badge?: string;
+  key: string;
 }
 
 @Component({
@@ -14,47 +16,81 @@ interface Education {
   templateUrl: './education.component.html',
   styleUrls: ['./education.component.scss']
 })
-export class EducationComponent {
+export class EducationComponent implements OnInit {
   educations: Education[] = [
     {
-      school: 'EPI School of Engineering Sousse',
-      degree: '2nd Year – Engineering Cycle',
-      period: '2024 – 2025',
-      specialty: 'Software Engineering',
+      school: '',
+      degree: '',
+      period: '',
+      specialty: '',
       icon: 'fa-solid fa-graduation-cap',
-      badge: 'fa-solid fa-certificate'
+      badge: 'fa-solid fa-certificate',
+      key: 'epi2'
     },
     {
-      school: 'EPI School of Engineering Sousse',
-      degree: '1st Year – Engineering Cycle',
-      period: '2023 – 2024',
-      specialty: 'Focus on advanced programming, software engineering, and system architecture',
+      school: '',
+      degree: '',
+      period: '',
+      specialty: '',
       icon: 'fa-solid fa-graduation-cap',
-      badge: 'fa-solid fa-certificate'
+      badge: 'fa-solid fa-certificate',
+      key: 'epi1'
     },
     {
-      school: 'IPEIM Monastir',
-      degree: '2nd Year – Preparatory Cycle',
-      period: '2022 – 2023',
-      specialty: 'Mathematics, physics, and computer science fundamentals',
+      school: '',
+      degree: '',
+      period: '',
+      specialty: '',
       icon: 'fa-solid fa-school',
-      badge: 'fa-solid fa-check-circle'
+      badge: 'fa-solid fa-check-circle',
+      key: 'ipeim'
     },
     {
-      school: 'IPEIN Nabeul',
-      degree: '1st Year – Preparatory Cycle',
-      period: '2021 – 2022',
-      specialty: 'Mathematics, physics, and computer science fundamentals',
+      school: '',
+      degree: '',
+      period: '',
+      specialty: '',
       icon: 'fa-solid fa-school',
-      badge: 'fa-solid fa-check-circle'
+      badge: 'fa-solid fa-check-circle',
+      key: 'ipein'
     },
     {
-      school: "Lycée Hached, M'saken Sousse",
-      degree: 'Baccalaureate in Experimental Sciences',
-      period: '2020 – 2021',
-      specialty: 'Experimental Sciences',
+      school: '',
+      degree: '',
+      period: '',
+      specialty: '',
       icon: 'fa-solid fa-user-graduate',
-      badge: 'fa-solid fa-award'
+      badge: 'fa-solid fa-award',
+      key: 'bac'
     }
   ];
+
+  constructor(private translate: TranslateService) {}
+
+  ngOnInit() {
+    // Mise à jour des informations lors du changement de langue
+    this.translate.onLangChange.subscribe(() => {
+      this.updateEducationInfo();
+    });
+    
+    // Initialisation des informations
+    this.updateEducationInfo();
+  }
+  
+  private updateEducationInfo() {
+    this.educations.forEach(edu => {
+      this.translate.get(`education.${edu.key}.school`).subscribe((res: string) => {
+        edu.school = res;
+      });
+      this.translate.get(`education.${edu.key}.degree`).subscribe((res: string) => {
+        edu.degree = res;
+      });
+      this.translate.get(`education.${edu.key}.period`).subscribe((res: string) => {
+        edu.period = res;
+      });
+      this.translate.get(`education.${edu.key}.specialty`).subscribe((res: string) => {
+        edu.specialty = res;
+      });
+    });
+  }
 }

@@ -13,16 +13,25 @@ interface ClientLogo {
 })
 export class HomeComponent {
   name = 'Mohamed Chiheb Eddine Benammar';
-  title = '2nd Year Computer Engineering Student– Software Engineering ';
-  heroMsg = 'I am Mohamed Chiheb, a Passionate Full Stack Developer.';
-  profileImg = '/assets/photo-profile.jpeg'; // To be placed in assets/
-  cvUrl = '/assets/cv-mohamed-chiheb.pdf'; // Link to the CV PDF
+
+  heroMsg = "Je suis Chiheb, Étudiant en 3ᵉ année cycle ingénieur – Génie Logiciel passionné par l’IA et les technologies modernes.";
+  profileImg = '/assets/photo-profile.jpeg';
+  cvUrl = '../../../assets/chiheb Eddine-cv-5emeannée-GL.pdf';
   clients: ClientLogo[] = [
-    { name: 'Microsoft', url: '#', img: 'assets/img/client-microsoft.png' },
-    { name: 'Google', url: '#', img: 'assets/img/client-google.png' },
-    { name: 'Spotify', url: '#', img: 'assets/img/client-spotify.png' },
-    { name: 'Tesla', url: '#', img: 'assets/img/client-tesla.png' },
-    { name: 'Yassir', url: '#', img: 'assets/img/client-yassir.png' },
-    { name: 'TikTok', url: '#', img: 'assets/img/client-tiktok.png' }
+    { name: 'Satoripop', url: '#', img: 'assets/img/client-satoripop.png' },
+    { name: 'Avionav', url: '#', img: 'assets/img/client-avionav.png' },
+    { name: 'EPI Digital School', url: '#', img: 'assets/img/client-epi.png' },
+    { name: 'ENISO', url: '#', img: 'assets/img/client-eniso.png' }
   ];
+
+  scrollToProjects(event: Event) {
+    event.preventDefault();
+    const element = document.getElementById('projects');
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  }
 }

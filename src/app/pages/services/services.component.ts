@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 interface Service {
   title: string;
   icon: string;
   description: string;
   skills: { name: string; icon: string; color?: string }[];
+  titleKey?: string;
+  descriptionKey?: string;
 }
 
 @Component({
@@ -12,48 +15,75 @@ interface Service {
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.scss']
 })
-export class ServicesComponent {
+export class ServicesComponent implements OnInit {
   services: Service[] = [
-    // ===== FRONT-END =====
     {
-      title: 'Front-End Development',
+      title: 'Développement Front-End',
+      titleKey: 'services.frontendDev',
       icon: 'fa-solid fa-laptop-code',
-      description: 'Creation of modern, responsive and high-performance interfaces.',
+      description: "Création d'interfaces modernes, réactives et performantes.",
+      descriptionKey: 'services.frontendDesc',
       skills: [
         { name: 'HTML5', icon: 'fa-brands fa-html5', color: '#e44d26' },
         { name: 'CSS3', icon: 'fa-brands fa-css3-alt', color: '#1572b6' },
-        { name: 'JavaScript', icon: 'fa-brands fa-js', color: '#f7df1e' },
         { name: 'Angular', icon: 'fa-brands fa-angular', color: '#dd0031' },
-        { name: 'Sass', icon: 'fa-brands fa-sass', color: '#c69' },
+        { name: 'React', icon: 'fa-brands fa-react', color: '#61dafb' },
         { name: 'Bootstrap', icon: 'fa-brands fa-bootstrap', color: '#563d7c' },
-        { name: 'Figma', icon: 'fa-brands fa-figma', color: '#a259ff' }
+        { name: 'Tailwind', icon: 'fa-solid fa-wind', color: '#38bdf8' }
       ]
     },
-
-    // ===== BACK-END =====
     {
-      title: 'Back-End Development',
-      icon: 'fa-solid fa-database',
-      description: 'Creation of APIs, database management, and business logic.',
+      title: 'Développement Back-End',
+      titleKey: 'services.backendDev',
+      icon: 'fa-solid fa-server',
+      description: "Création d'API REST sécurisées et d'architectures microservices.",
+      descriptionKey: 'services.backendDesc',
       skills: [
-        { name: 'Java', icon: 'fa-brands fa-java', color: '#007396' },
         { name: 'Spring Boot', icon: 'fa-solid fa-leaf', color: '#6db33f' },
-        { name: 'Python', icon: 'fa-brands fa-python', color: '#3776ab' }
+        { name: 'Node.js', icon: 'fa-brands fa-node', color: '#68a063' },
+        { name: 'Python', icon: 'fa-brands fa-python', color: '#3776ab' },
+        { name: 'PHP', icon: 'fa-brands fa-php', color: '#777bb4' }
       ]
     },
-
-    // ===== AI / DATA =====
     {
-      title: 'Artificial Intelligence & Data',
+      title: 'Intelligence Artificielle & Data',
+      titleKey: 'services.aiDev',
       icon: 'fa-solid fa-brain',
-      description: 'Data analysis, machine learning, and visualization.',
+      description: "Développement de solutions intelligentes et analyse de données.",
+      descriptionKey: 'services.aiDesc',
       skills: [
-        { name: 'Python', icon: 'fa-brands fa-python', color: '#3776ab' },
-        { name: 'Pandas', icon: 'fa-solid fa-table', color: '#150458' },
-        { name: 'NumPy', icon: 'fa-solid fa-square-root-variable', color: '#013243' },
-        { name: 'Matplotlib', icon: 'fa-solid fa-chart-column', color: '#11557c' },
-        { name: 'Scikit-learn', icon: 'fa-solid fa-robot', color: '#f7931e' }
+        { name: 'TensorFlow', icon: 'fa-solid fa-network-wired', color: '#ff6f00' },
+        { name: 'PyTorch', icon: 'fa-solid fa-fire', color: '#ee4c2c' },
+        { name: 'Scikit-learn', icon: 'fa-solid fa-cogs', color: '#f89939' },
+        { name: 'Pandas', icon: 'fa-solid fa-table', color: '#150458' }
       ]
     }
   ];
+  
+  constructor(private translate: TranslateService) {}
+  
+  ngOnInit() {
+    // Mise à jour des textes lors du changement de langue
+    this.translate.onLangChange.subscribe(() => {
+      this.updateServicesText();
+    });
+    
+    // Initialisation des textes
+    this.updateServicesText();
+  }
+  
+  private updateServicesText() {
+    this.services.forEach(service => {
+      if (service.titleKey) {
+        this.translate.get(service.titleKey).subscribe((res: string) => {
+          service.title = res;
+        });
+      }
+      if (service.descriptionKey) {
+        this.translate.get(service.descriptionKey).subscribe((res: string) => {
+          service.description = res;
+        });
+      }
+    });
+  }
 }

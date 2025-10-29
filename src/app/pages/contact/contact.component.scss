@@ -1,50 +1,76 @@
 .contact {
-  padding: 4rem 0.5rem; /* Réduit le padding général */
+  padding: 4rem 2rem;
   text-align: center;
-  background: linear-gradient(135deg, #f0f4f8, #e0e7ee);
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
-  margin: 1.5rem auto;
-  max-width: 1200px; /* Réduit la largeur maximale */
+  background: var(--background-secondary);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.contact__container {
+  align-items: stretch; /* pour que les blocs aient la même hauteur */
+}
+.contact__input,
+.contact__textarea {
+  width: 100%;
+  min-width: 0; /* empêche les débordements sur petits écrans */
+}
+.contact__btn {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto; /* centre le bouton */
 }
 
 .contact__title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 2.5rem;
-  color: #2c3e50;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.08);
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  color: var(--primary-color);
+  position: relative;
+}
+
+.contact__title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-hover));
+  border-radius: 2px;
 }
 
 .contact__container {
   display: flex;
   flex-wrap: wrap;
-  gap: 2.5rem;
+  gap: 3rem;
   justify-content: center;
   align-items: flex-start;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  padding: 2rem;
+  background: var(--background-primary);
+  border-radius: 2rem;
+  box-shadow: var(--shadow);
+  padding: 3rem;
+  border: 1px solid var(--border-color);
 }
 
 .contact__form {
-  background: #ffffff;
-  border-radius: 1rem;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
-  padding: 2rem;
-  min-width: 280px;
-  max-width: 400px; /* Réduit la largeur maximale */
-  flex: 1 1 280px;
+  background: var(--background-primary);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow);
+  padding: 2.5rem;
+  min-width: 300px;
+  max-width: 450px;
+  flex: 1 1 300px;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
   align-items: stretch;
-  transition: box-shadow 0.3s ease-in-out;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
 }
 
 .contact__form:hover {
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
 }
 
 .contact__group {
@@ -54,20 +80,22 @@
 
 .contact__input, .contact__textarea {
   width: 100%;
-  padding: 0.8rem 1.1rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 7px;
+  padding: 1rem 1.25rem;
+  border: 2px solid var(--border-color);
+  border-radius: 1rem;
   font-size: 1rem;
-  transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
-  background: #f7f7f7;
-  color: #333;
+  transition: all 0.3s ease;
+  background: var(--background-secondary);
+  color: var(--text-primary);
+  font-family: inherit;
 }
 
 .contact__input:focus, .contact__textarea:focus {
-  border-color: #3498db;
-  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.15);
-  background-color: #ffffff;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  background-color: var(--background-primary);
   outline: none;
+  transform: translateY(-2px);
 }
 
 .contact__textarea {
@@ -76,123 +104,164 @@
 }
 
 .contact__btn {
-  background: linear-gradient(45deg, #3498db, #2980b9);
-  color: #fff;
+  background: var(--accent-color);
+  color: var(--text-light);
   border: none;
-  border-radius: 7px;
-  padding: 0.9rem 1.8rem;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
   font-size: 1rem;
-  margin-top: 0.8rem;
+  margin-top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .contact__btn:disabled {
-  background: linear-gradient(45deg, #c0c0c0, #e0e0e0);
+  background: var(--text-secondary);
   cursor: not-allowed;
   box-shadow: none;
+  opacity: 0.6;
 }
 
 .contact__btn:not(:disabled):hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  opacity: 0.95;
+  background: var(--accent-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
 }
 
 .contact__info {
-  background: #ffffff;
-  border-radius: 1rem;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
-  padding: 2rem;
-  min-width: 250px;
-  max-width: 400px; /* Réduit la largeur maximale */
-  flex: 1 1 250px;
+  background: var(--background-primary);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow);
+  padding: 2.5rem;
+  min-width: 300px;
+  max-width: 450px;
+  flex: 1 1 300px;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
   align-items: stretch;
   font-size: 1rem;
-  color: #34495e;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.contact__info:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
 }
 
 .contact__info-item {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  color: #2c3e50;
+  gap: 1rem;
+  color: var(--text-primary);
   font-weight: 500;
-  margin-bottom: 0.4rem;
-  transition: transform 0.2s ease-in-out;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  background: var(--background-secondary);
 }
 
 .contact__info-item:hover {
-  transform: translateX(4px);
+  transform: translateX(8px);
+  background: rgba(99, 102, 241, 0.05);
 }
 
 .contact__info-item i {
-  font-size: 1.3rem;
-  color: #3498db;
-  min-width: 28px;
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  min-width: 32px;
   text-align: center;
 }
 
 .contact__info-item a {
-  color: #3498db;
-  margin-right: 1.2rem;
+  color: var(--accent-color);
+  margin-right: 1.5rem;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.2s, transform 0.2s;
+  transition: all 0.3s ease;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .contact__info-item a:hover {
-  color: #2980b9;
-  transform: translateY(-1px);
+  color: var(--accent-hover);
+  background: rgba(99, 102, 241, 0.1);
+  transform: translateY(-2px);
+}
+.contact__map {
+  width: 100%;
+  height: 300px; /* ou 100% selon le conteneur */
+  max-width: 100%;
+}
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .contact__map {
   margin-top: 1.5rem;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   overflow: hidden;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-  transition: box-shadow 0.3s ease-in-out;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
 }
 
 .contact__map:hover {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+  .contact {
+    padding: 2rem 1rem;
+  }
+  
+  .contact__title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
   .contact__container {
     flex-direction: column;
     gap: 2rem;
     align-items: center;
-    padding: 1.5rem;
+    padding: 2rem;
   }
+  
   .contact__form, .contact__info {
     min-width: unset;
-    max-width: 90vw;
-    padding: 1.5rem;
+    max-width: 100%;
+    padding: 2rem;
   }
-  .contact__title {
-    font-size: 2.2rem;
-    margin-bottom: 2rem;
-  }
+  
   .contact__group {
     flex-direction: column;
     gap: 1rem;
   }
+  
   .contact__btn {
-    padding: 0.7rem 1.2rem;
-    font-size: 0.95rem;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
   }
+  
   .contact__info-item {
     font-size: 0.95rem;
+    padding: 0.5rem;
   }
+  
   .contact__info-item i {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -210,5 +279,10 @@
   .contact__title {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .contact__group {
+    gap: 0.75rem;
   }
 }

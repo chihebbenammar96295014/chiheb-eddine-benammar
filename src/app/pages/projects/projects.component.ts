@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 interface Project {
   title: string;
@@ -10,6 +11,7 @@ interface Project {
   categories: string[];
   mediaType?: 'image' | 'video';
   mediaUrl?: string;
+  translationKey: string;
 }
 
 @Component({
@@ -21,9 +23,9 @@ export class ProjectsComponent implements OnInit {
   filter: string = 'all';
   projects: Project[] = [
     {
-      title: 'WorkWave Platform',
+      title: '',
       image: '../../../assets/workWave/logo.png',
-      description: 'Web platform for freelancers and companies (matching, project management, profiles).',
+      description: '',
       stack: [
         { name: 'PHP', icon: 'fa-brands fa-php', color: '#777bb4' },
         { name: 'MySQL', icon: 'fa-solid fa-database', color: '#4479a1' },
@@ -35,12 +37,13 @@ export class ProjectsComponent implements OnInit {
       demo: '../../../assets/workWave/video-workWave.mp4',
       categories: ['web'],
       mediaType: 'video',
-      mediaUrl: '../../../assets/workWave/video-workWave.mp4'
+      mediaUrl: '../../../assets/workWave/video-workWave.mp4',
+      translationKey: 'workwave'
     },
     {
-      title: 'Medical Appointment Chatbot',
+      title: '',
       image: '../../../assets/consultEase/consultEase-home.png',
-      description: 'Medical pre-diagnosis system with AI chatbot (Rasa) and appointment booking.',
+      description: '',
       stack: [
         { name: 'Angular', icon: 'fa-brands fa-angular', color: '#dd0031' },
         { name: 'Spring Boot', icon: 'fa-solid fa-leaf', color: '#6db33f' },
@@ -51,12 +54,13 @@ export class ProjectsComponent implements OnInit {
       demo: '../../../assets/consultEase/video-consultEase.mp4',
       categories: ['ia', 'web'],
       mediaType: 'video',
-      mediaUrl: '../../../assets/consultEase/video-consultEase.mp4'
+      mediaUrl: '../../../assets/consultEase/video-consultEase.mp4',
+      translationKey: 'medical'
     },
     {
-      title: 'Tic-Tac-Toe Game',
+      title: '',
       image: '../../../assets/jeux xo/jeuxo.png',
-      description: 'Interactive game coded in Python, score management, simple interface.',
+      description: '',
       stack: [
         { name: 'Python', icon: 'fa-brands fa-python', color: '#3776ab' }
       ],
@@ -64,12 +68,13 @@ export class ProjectsComponent implements OnInit {
       demo: '../../../assets/jeux xo/jeu XO.mp4',
       categories: ['python'],
       mediaType: 'video',
-      mediaUrl: '../../../assets/jeux xo/jeu XO.mp4'
+      mediaUrl: '../../../assets/jeux xo/jeu XO.mp4',
+      translationKey: 'tictactoe'
     },
     {
-      title: 'Site ENISO',
+      title: '',
       image: '../../../assets/Eniso-Team/logo.png',
-      description: "Showcase website for ENISO, presenting activities and clubs.",
+      description: '',
       stack: [
         { name: 'React', icon: 'fa-brands fa-react', color: '#61dafb' },
         { name: 'HTML5', icon: 'fa-brands fa-html5', color: '#e44d26' },
@@ -80,12 +85,13 @@ export class ProjectsComponent implements OnInit {
       demo: '../../../assets/Eniso-Team/magazin_eniso.mp4',
       categories: ['frontend'],
       mediaType: 'video',
-      mediaUrl: '../../../assets/Eniso-Team/magazin_eniso.mp4'
+      mediaUrl: '../../../assets/Eniso-Team/magazin_eniso.mp4',
+      translationKey: 'eniso'
     },
     {
-      title: 'Data Analysis Project',
+      title: '',
       image: '../../../assets/analyse/photo-analyse.png',
-      description: 'Data analysis with visualization and insight extraction.',
+      description: '',
       stack: [
         { name: 'Python', icon: 'fa-brands fa-python', color: '#3776ab' },
         { name: 'Pandas', icon: 'fa-solid fa-database', color: '#150458' },
@@ -96,12 +102,13 @@ export class ProjectsComponent implements OnInit {
       demo: '#',
       categories: ['data', 'python'],
       mediaType: 'image',
-      mediaUrl: '../../../assets/analyse/photo-analyse.png'
+      mediaUrl: '../../../assets/analyse/photo-analyse.png',
+      translationKey: 'data'
     },
     {
-      title: 'Speed Interface for Aircraft',
+      title: '',
       image: '../../../assets/avionav-speed/avionav.png',
-      description: 'High-performance interface for avionics systems.',
+      description: '',
       stack: [
         { name: 'Qt', icon: 'fa-solid fa-cube', color: '#41cd52' },
         { name: 'C++', icon: 'fa-solid fa-code', color: '#00599c' }
@@ -110,16 +117,35 @@ export class ProjectsComponent implements OnInit {
       demo: '../../../assets/avionav-speed/avionav.png',
       categories: ['embedded'],
       mediaType: 'image',
-      mediaUrl: '../../../assets/avionav-speed/avionav.png'
+      mediaUrl: '../../../assets/avionav-speed/avionav.png',
+      translationKey: 'aircraft'
     }
   ];
 
   selectedProject: Project | null = null;
   selectedCategory: string = 'all';
 
-  constructor() { }
+  constructor(private translate: TranslateService) { }
 
   ngOnInit(): void {
+    // Mise à jour des informations lors du changement de langue
+    this.translate.onLangChange.subscribe(() => {
+      this.updateProjectsInfo();
+    });
+    
+    // Initialisation des informations
+    this.updateProjectsInfo();
+  }
+
+  private updateProjectsInfo() {
+    this.projects.forEach(project => {
+      this.translate.get(`projects.items.${project.translationKey}.title`).subscribe((res: string) => {
+        project.title = res;
+      });
+      this.translate.get(`projects.items.${project.translationKey}.description`).subscribe((res: string) => {
+        project.description = res;
+      });
+    });
   }
 
   getCategoryIcon(category: string): string {

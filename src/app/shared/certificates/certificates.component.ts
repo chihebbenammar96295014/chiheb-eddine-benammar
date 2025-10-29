@@ -4,7 +4,7 @@ interface Certificate {
   name: string;
   platform: string;
   date: string;
-  url: string;
+  
   skills: string[];
 }
 
@@ -18,30 +18,26 @@ export class CertificatesComponent {
     {
       name: 'AWS Academy Cloud Foundations',
       platform: 'AWS Academy',
-      date: 'Nov. 2024',
-      url: '#', // Remplacer par le vrai lien si dispo
-      skills: ['Cloud computing basics', 'AWS core services']
+      date: '12/2024',
+      skills: ['Cloud computing', 'Services AWS de base']
     },
     {
-      name: 'CCNA 1',
+      name: 'CCNA 1 - Introduction aux réseaux',
       platform: 'Cisco',
-      date: 'Mar. 2024',
-      url: '#',
-      skills: ['LAN/WAN skills', 'TCP/IP', 'OSPF protocol knowledge']
+      date: '05/2024',
+      skills: ['LAN/WAN', 'TCP/IP', 'OSPF']
     },
     {
-      name: 'CCNA 2',
+      name: 'CCNA 2 - Switching, Routing & Wireless Essentials',
       platform: 'Cisco',
-      date: 'May 2024',
-      url: '#',
-      skills: ['Advanced networking', 'IP addressing', 'Subnetting']
+      date: '06/2024',
+      skills: ['Routage avancé', 'Adressage IP', 'Subnetting']
     },
     {
-      name: 'Java Programming Certificate',
-      platform: 'Udemy',
-      date: 'Feb. 2024',
-      url: '#',
-      skills: ['Object-oriented programming', 'Java basics']
+      name: 'Certified Hedera Hashgraph Developer',
+      platform: 'Hedera Hashgraph Foundation',
+      date: '04/2025',
+      skills: ['Blockchain', 'Développement sur Hedera']
     }
   ];
 }

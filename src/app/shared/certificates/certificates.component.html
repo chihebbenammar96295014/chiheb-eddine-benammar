@@ -1,5 +1,5 @@
 <section class="certificates">
-   
+    <h2 class="certificates__title">{{ 'sections.certificates' | translate }}</h2>
     <div class="certificates__grid">
         <div *ngFor="let cert of certificates" class="certificate-card">
             <div class="certificate-card__inner">
@@ -13,7 +13,7 @@
                     <div class="certificate-card__skills">
                         <span *ngFor="let skill of cert.skills" class="certificate-card__skill">{{ skill }}</span>
                     </div>
-                    <a [href]="cert.url" target="_blank" class="certificate-card__btn">Voir le certificat</a>
+                    
                 </div>
             </div>
         </div>

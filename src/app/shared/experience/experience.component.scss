@@ -3,12 +3,7 @@
   text-align: center;
 }
 
-.timeline__title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 2.5rem;
-  color: #1976d2;
-}
+/* Timeline title now uses the standardized section-title class */
 
 .timeline__container {
   position: relative;
@@ -184,7 +179,7 @@
 
   &__title {
     font-size: 1.8rem;
-    color: #1976d2;
+    color: var(--primary-color);
     margin-bottom: 1.5rem;
     text-align: center;
   }

@@ -1,14 +1,32 @@
 <nav class="navbar">
   <div class="navbar__logo">
-    <a routerLink="/">Mohamed Chiheb Eddine</a>
+    <a href="#home" (click)="scrollToSection('home', $event)" aria-label="Aller à l'accueil">Mohamed Chiheb Eddine</a>
   </div>
   <ul class="navbar__links" [class.active]="menuOpen">
-    <li><a routerLink="/" routerLinkActive="active" (click)="closeMenu()">Home</a></li>
-    <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a></li>
-    <li><a routerLink="/services" routerLinkActive="active" (click)="closeMenu()">Services</a></li>
-    <li><a routerLink="/projects" routerLinkActive="active" (click)="closeMenu()">Projects</a></li>
-    <li><a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a></li>
+    <li><a href="#home" (click)="scrollToSection('home', $event)">{{ 'navbar.home' | translate }}</a></li>
+    <li><a href="#about" (click)="scrollToSection('about', $event)">{{ 'navbar.about' | translate }}</a></li>
+    <li><a href="#services" (click)="scrollToSection('services', $event)">{{ 'navbar.services' | translate }}</a></li>
+    <li><a href="#projects" (click)="scrollToSection('projects', $event)">{{ 'navbar.projects' | translate }}</a></li>
+    <li><a href="#contact" (click)="scrollToSection('contact', $event)">{{ 'navbar.contact' | translate }}</a></li>
   </ul>
+  
+  <div class="navbar__actions">
+    <div class="navbar__lang-toggle">
+      <button class="lang-toggle" [class.active]="currentLang === 'fr'" (click)="switchLanguage('fr')" aria-label="Passer en français">
+        FR
+      </button>
+      <button class="lang-toggle" [class.active]="currentLang === 'en'" (click)="switchLanguage('en')" aria-label="Switch to English">
+        EN
+      </button>
+    </div>
+    
+    <div class="navbar__theme-toggle">
+      <button class="theme-toggle" (click)="toggleTheme()" [attr.aria-label]="(isDarkMode ? 'navbar.lightMode' : 'navbar.darkMode') | translate">
+        <i class="fas fa-sun" *ngIf="!isDarkMode"></i>
+        <i class="fas fa-moon" *ngIf="isDarkMode"></i>
+      </button>
+    </div>
+  </div>
   <div class="navbar__burger" (click)="toggleMenu()">
     <span></span>
     <span></span>

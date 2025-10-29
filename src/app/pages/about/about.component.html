@@ -1,52 +1,47 @@
 <section class="about-main">
   <div class="about-main__left">
-    <h1 class="about-main__title">About Me</h1>
+    <h1 class="section-title">{{ 'about.title' | translate }}</h1>
     <p class="about-main__desc">
-      Passionate about software development, I am currently a 2nd-year engineering student at EPI
-      School of Engineering Sousse, specializing in Software Engineering. I have a strong interest in full-stack
-      development,
-      AI, and solving complex problems. I enjoy working in a team, learning new technologies, and taking on challenges.
-      I seek to contribute to innovative projects and collaborate with people who share the same passion for tech and
-      positive impact.
+      {{ 'about.description1' | translate }}
     </p>
     <p class="about-main__desc">
-      My background has allowed me to acquire solid skills in Java, Python, Angular, Spring Boot, as well
-      as in cloud (AWS) and data science. I am motivated by the desire to create useful, high-performance, and
-      accessible solutions for everyone.
+      {{ 'about.description2' | translate }}
     </p>
   </div>
-  <div class="about-main__right">
-    <img src="../../../assets/photo-profile.jpeg" alt="Profile Picture" class="about-main__img" />
-  </div>
+
 </section>
+<app-skills></app-skills>
 
 <section class="about-sections">
   <div class="about-sections__grid">
     <div class="about-sections__item">
-      <h2 class="about-sections__title">Education</h2>
+      <h2 class="section-title">{{ 'sections.projects' | translate }}</h2>
+      <app-experience [typeFilter]="'project'"></app-experience>
+    </div>
+
+    <div class="about-sections__item">
+      <h2 class="section-title">{{ 'sections.education' | translate }}</h2>
       <app-education></app-education>
       <p></p>
       <p></p>
       <p></p>
-      <h2 class="about-sections__title">Languages</h2>
+      <h2 class="section-title">{{ 'sections.languages' | translate }}</h2>
       <p></p>
       <p></p>
 
       <app-languages></app-languages>
     </div>
-    <div class="about-sections__item">
-      <h2 class="about-sections__title">Projects</h2>
-      <app-experience [typeFilter]="'project'"></app-experience>
-    </div>
+
+
   </div>
 
   <div class="about-sections__stages">
-    <h2 class="about-sections__title">Internships</h2>
+    <h2 class="section-title">{{ 'sections.internships' | translate }}</h2>
     <app-experience [typeFilter]="'stage'"></app-experience>
   </div>
 
   <div class="about-sections__languages-interests">
-    <h2 class="about-sections__title" style="margin-top: 3rem;">Interests</h2>
+    <h2 class="section-title" style="margin-top: 3rem;">{{ 'sections.interests' | translate }}</h2>
     <app-interests></app-interests>
   </div>
 </section>

@@ -1,0 +1,122 @@
+{
+  "navbar": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "projects": "Projets",
+    "contact": "Contact",
+    "language": "Langue",
+    "darkMode": "Mode sombre",
+    "lightMode": "Mode clair"
+  },
+  "home": {
+    "welcome": "Bienvenue sur mon portfolio",
+    "heroMsg": "Je suis Chiheb, Étudiant en 3ᵉ année cycle ingénieur – Génie Logiciel passionné par l'IA et les technologies modernes.",
+    "viewProjects": "Voir mes projets",
+    "downloadCV": "Télécharger CV"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "description1": "Étudiant en 3ᵉ année du cycle ingénieur en Génie Logiciel à EPI Digital School, je suis passionné par le développement applicatif et les technologies de l'intelligence artificielle. Mon parcours m'a permis d'acquérir une solide maîtrise des environnements Full Stack (Angular, Spring Boot, React, Node.js) ainsi que des outils d'IA et de data science (Python, Rasa, PyTorch, Pandas).",
+    "description2": "Curieux, rigoureux et créatif, j'aime relever des défis techniques et travailler sur des projets innovants mêlant développement web, mobile et intelligence artificielle. Mon objectif est de concevoir des solutions performantes et utiles, tout en continuant à évoluer dans un environnement stimulant et collaboratif."
+  },
+  "sections": {
+    "education": "Formation",
+    "projects": "Projets",
+    "skills": "Compétences",
+    "languages": "Langues",
+    "certificates": "Certificats",
+    "interests": "Centres d'intérêt",
+    "internships": "Stages"
+  },
+  "education": {
+    "epi2": {
+      "school": "École Polytechnique d'Ingénierie de Sousse",
+      "degree": "2ème Année – Cycle Ingénieur",
+      "period": "2024 – 2025",
+      "specialty": "Génie Logiciel"
+    },
+    "epi1": {
+      "school": "École Polytechnique d'Ingénierie de Sousse",
+      "degree": "1ère Année – Cycle Ingénieur",
+      "period": "2023 – 2024",
+      "specialty": "Spécialisation en programmation avancée, génie logiciel et architecture système"
+    },
+    "ipeim": {
+      "school": "IPEIM Monastir",
+      "degree": "2ème Année – Cycle Préparatoire",
+      "period": "2022 – 2023",
+      "specialty": "Fondamentaux en mathématiques, physique et informatique"
+    },
+    "ipein": {
+      "school": "IPEIN Nabeul",
+      "degree": "1ère Année – Cycle Préparatoire",
+      "period": "2021 – 2022",
+      "specialty": "Fondamentaux en mathématiques, physique et informatique"
+    },
+    "bac": {
+      "school": "Lycée Hached, M'saken Sousse",
+      "degree": "Baccalauréat en Sciences Expérimentales",
+      "period": "2020 – 2021",
+      "specialty": "Sciences Expérimentales"
+    }
+  },
+  "projects": {
+    "title": "Mes Projets",
+    "subtitle": "Découvrez mes réalisations et expériences de développement",
+    "items": {
+      "workwave": {
+        "title": "Plateforme WorkWave",
+        "description": "Plateforme web pour freelances et entreprises (matching, gestion de projets, profils)."
+      },
+      "medical": {
+        "title": "Chatbot de Rendez-vous Médicaux",
+        "description": "Système de pré-diagnostic médical avec chatbot IA (Rasa) et prise de rendez-vous."
+      },
+      "tictactoe": {
+        "title": "Jeu de Morpion",
+        "description": "Jeu interactif codé en Python, gestion des scores, interface simple."
+      },
+      "eniso": {
+        "title": "Site ENISO",
+        "description": "Site vitrine pour l'ENISO, présentant les activités et les clubs."
+      },
+      "data": {
+        "title": "Projet d'Analyse de Données",
+        "description": "Analyse de données avec visualisation et extraction d'insights."
+      },
+      "aircraft": {
+        "title": "Interface de Vitesse pour Avion",
+        "description": "Interface haute performance pour systèmes avioniques."
+      },
+      "viewDemo": "Voir la Démo"
+    }
+  },
+  "languages": {
+    "arabic": "Arabe",
+    "french": "Français",
+    "english": "Anglais",
+    "spanish": "Espagnol",
+    "native": "Natif",
+    "fluent": "Courant",
+    "beginner": "Débutant"
+  },
+  "interests": {
+    "swimming": "Natation",
+    "swimmingDesc": "J'aime nager pour me détendre et rester en forme.",
+    "hiking": "Randonnée",
+    "hikingDesc": "Explorer la nature et relever de nouveaux défis.",
+    "chess": "Échecs",
+    "chessDesc": "Développer la stratégie et la concentration.",
+    "programming": "Competitive programming",
+    "programmingDesc": "Résoudre des problèmes algorithmiques pour progresser."
+  },
+  "services": {
+    "frontendDev": "Développement Front-End",
+    "frontendDesc": "Création d'interfaces modernes, réactives et performantes.",
+    "backendDev": "Développement Back-End",
+    "backendDesc": "Création d'API REST sécurisées et d'architectures microservices.",
+    "aiDev": "Intelligence Artificielle & Data",
+    "aiDesc": "Développement de solutions intelligentes et analyse de données."
+  }
+}

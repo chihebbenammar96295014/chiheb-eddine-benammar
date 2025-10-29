@@ -1,0 +1,154 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact",
+    "language": "Language",
+    "darkMode": "Dark mode",
+    "lightMode": "Light mode"
+  },
+  "home": {
+    "welcome": "Welcome to my portfolio",
+    "heroMsg": "I'm Chiheb, a 3rd year Software Engineering student passionate about AI and modern technologies.",
+    "viewProjects": "View my projects",
+    "downloadCV": "Download CV"
+  },
+  "about": {
+    "title": "About Me",
+    "description1": "3rd year Software Engineering student at EPI Digital School, I am passionate about application development and artificial intelligence technologies. My journey has allowed me to acquire solid mastery of Full Stack environments (Angular, Spring Boot, React, Node.js) as well as AI and data science tools (Python, Rasa, PyTorch, Pandas).",
+    "description2": "Curious, rigorous, and creative, I enjoy taking on technical challenges and working on innovative projects combining web, mobile development, and artificial intelligence. My goal is to design efficient and useful solutions while continuing to evolve in a stimulating and collaborative environment."
+  },
+  "sections": {
+    "education": "Education",
+    "projects": "Projects",
+    "skills": "Skills",
+    "languages": "Languages",
+    "certificates": "Certificates",
+    "interests": "Interests",
+    "internships": "Internships"
+  },
+  "education": {
+    "epi2": {
+      "school": "EPI School of Engineering Sousse",
+      "degree": "2nd Year – Engineering Cycle",
+      "period": "2024 – 2025",
+      "specialty": "Software Engineering"
+    },
+    "epi1": {
+      "school": "EPI School of Engineering Sousse",
+      "degree": "1st Year – Engineering Cycle",
+      "period": "2023 – 2024",
+      "specialty": "Focus on advanced programming, software engineering, and system architecture"
+    },
+    "ipeim": {
+      "school": "IPEIM Monastir",
+      "degree": "2nd Year – Preparatory Cycle",
+      "period": "2022 – 2023",
+      "specialty": "Mathematics, physics, and computer science fundamentals"
+    },
+    "ipein": {
+      "school": "IPEIN Nabeul",
+      "degree": "1st Year – Preparatory Cycle",
+      "period": "2021 – 2022",
+      "specialty": "Mathematics, physics, and computer science fundamentals"
+    },
+    "bac": {
+      "school": "Lycée Hached, M'saken Sousse",
+      "degree": "Baccalaureate in Experimental Sciences",
+      "period": "2020 – 2021",
+      "specialty": "Experimental Sciences"
+    }
+  },
+  "education": {
+    "epi2": {
+      "school": "EPI School of Engineering Sousse",
+      "degree": "2nd Year – Engineering Cycle",
+      "period": "2024 – 2025",
+      "specialty": "Software Engineering"
+    },
+    "epi1": {
+      "school": "EPI School of Engineering Sousse",
+      "degree": "1st Year – Engineering Cycle",
+      "period": "2023 – 2024",
+      "specialty": "Focus on advanced programming, software engineering, and system architecture"
+    },
+    "ipeim": {
+      "school": "IPEIM Monastir",
+      "degree": "2nd Year – Preparatory Cycle",
+      "period": "2022 – 2023",
+      "specialty": "Mathematics, physics, and computer science fundamentals"
+    },
+    "ipein": {
+      "school": "IPEIN Nabeul",
+      "degree": "1st Year – Preparatory Cycle",
+      "period": "2021 – 2022",
+      "specialty": "Mathematics, physics, and computer science fundamentals"
+    },
+    "bac": {
+      "school": "Lycée Hached, M'saken Sousse",
+      "degree": "Baccalaureate in Experimental Sciences",
+      "period": "2020 – 2021",
+      "specialty": "Experimental Sciences"
+    }
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "Discover my achievements and development experiences",
+    "items": {
+      "workwave": {
+        "title": "WorkWave Platform",
+        "description": "Web platform for freelancers and companies (matching, project management, profiles)."
+      },
+      "medical": {
+        "title": "Medical Appointment Chatbot",
+        "description": "Medical pre-diagnosis system with AI chatbot (Rasa) and appointment booking."
+      },
+      "tictactoe": {
+        "title": "Tic-Tac-Toe Game",
+        "description": "Interactive game coded in Python, score management, simple interface."
+      },
+      "eniso": {
+        "title": "Site ENISO",
+        "description": "Showcase website for ENISO, presenting activities and clubs."
+      },
+      "data": {
+        "title": "Data Analysis Project",
+        "description": "Data analysis with visualization and insight extraction."
+      },
+      "aircraft": {
+        "title": "Speed Interface for Aircraft",
+        "description": "High-performance interface for avionics systems."
+      },
+      "viewDemo": "View Demo"
+    }
+  },
+  "languages": {
+    "arabic": "Arabic",
+    "french": "French",
+    "english": "English",
+    "spanish": "Spanish",
+    "native": "Native",
+    "fluent": "Fluent",
+    "beginner": "Beginner"
+  },
+  "interests": {
+    "swimming": "Swimming",
+    "swimmingDesc": "I enjoy swimming to relax and stay fit.",
+    "hiking": "Hiking",
+    "hikingDesc": "Exploring nature and taking on new challenges.",
+    "chess": "Chess",
+    "chessDesc": "Developing strategy and concentration.",
+    "programming": "Competitive programming",
+    "programmingDesc": "Solving algorithmic problems to improve skills."
+  },
+  "services": {
+    "frontendDev": "Front-End Development",
+    "frontendDesc": "Creating modern, responsive and high-performance interfaces.",
+    "backendDev": "Back-End Development",
+    "backendDesc": "Creating secure REST APIs and microservice architectures.",
+    "aiDev": "Artificial Intelligence & Data",
+    "aiDesc": "Developing intelligent solutions and data analysis."
+  }
+}

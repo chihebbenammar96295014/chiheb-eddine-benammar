@@ -1,9 +1,9 @@
-<section class="home-hero">
+<!--<section class="home-hero">
   <div class="home-hero__content">
     <h1 class="home-hero__title">{{ heroMsg }}</h1>
     <h2 class="home-hero__subtitle">{{ title }}</h2>
     <div class="home-hero__actions">
-      <a routerLink="/projects" class="home-hero__btn">View My Projects</a>
+      <a href="#projects" (click)="scrollToProjects($event)" class="home-hero__btn">View My Projects</a>
       <a [href]="cvUrl" target="_blank" class="home-hero__btn home-hero__btn--outline">Download My CV</a>
     </div>
   </div>
@@ -12,6 +12,28 @@
   </div>
 </section>
 
+-->
+<section class="home-hero">
+  <div class="home-hero__content">
+    <span class="home-hero__label">{{ 'home.welcome' | translate }}</span>
+    <h1 class="home-hero__title">
+      <span class="home-hero__title-highlight">{{ 'home.heroMsg' | translate }}</span>
+    </h1>
+
+    <div class="home-hero__actions">
+      <a href="#projects" class="home-hero__btn home-hero__btn--primary" (click)="scrollToProjects($event)">{{
+        'home.viewProjects' | translate }}</a>
+      <a [href]="cvUrl" target="_blank" class="home-hero__btn home-hero__btn--secondary">{{ 'home.downloadCV' |
+        translate }}</a>
+    </div>
 
 
-<app-skills></app-skills>
+
+  </div>
+  <div class="home-hero__profile">
+    <div class="home-hero__img-wrapper">
+      <div class="home-hero__img-bg"></div>
+      <img src="../../../assets/photo-proff-chat.png" alt="Profile Picture" class="home-hero__img" />
+    </div>
+  </div>
+</section>
