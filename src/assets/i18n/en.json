@@ -11,7 +11,9 @@
   },
   "home": {
     "welcome": "Welcome to my portfolio",
-    "heroMsg": "I'm Chiheb, a 3rd year Software Engineering student passionate about AI and modern technologies.",
+    "heroMsg": "I'm Chiheb Eddine Benammar",
+    "heroSubMSg":"A 3rd year Software Engineering student",
+    "heroDescription":"Based in Sousse-Tunisia Passionate about AI and modern technologies.",
     "viewProjects": "View my projects",
     "downloadCV": "Download CV"
   },

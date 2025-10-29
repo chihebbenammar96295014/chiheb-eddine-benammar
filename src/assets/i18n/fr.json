@@ -11,7 +11,10 @@
   },
   "home": {
     "welcome": "Bienvenue sur mon portfolio",
-    "heroMsg": "Je suis Chiheb, Étudiant en 3ᵉ année cycle ingénieur – Génie Logiciel passionné par l'IA et les technologies modernes.",
+    "heroMsg": "Je suis Chiheb Eddine Benammar",
+    "heroSubMSg": "Étudiant en 3ᵉ année cycle ingénieur – Génie Logiciel",
+    "heroDescription": " basé à Sousse-Tunisie passionné par l'IA et les technologies modernes.",
+
     "viewProjects": "Voir mes projets",
     "downloadCV": "Télécharger CV"
   },
