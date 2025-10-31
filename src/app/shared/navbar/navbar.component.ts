@@ -47,8 +47,9 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.themeService.toggleTheme();
   }
   
-  switchLanguage(lang: string) {
-    this.translationService.switchLanguage(lang);
+  switchLanguage() {
+    const newLang = this.currentLang === "fr" ? "en" : "fr";
+    this.translationService.switchLanguage(newLang);
   }
 
   scrollToSection(sectionId: string, event: Event) {

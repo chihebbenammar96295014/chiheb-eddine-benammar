@@ -12,11 +12,8 @@
   
   <div class="navbar__actions">
     <div class="navbar__lang-toggle">
-      <button class="lang-toggle" [class.active]="currentLang === 'fr'" (click)="switchLanguage('fr')" aria-label="Passer en français">
-        FR
-      </button>
-      <button class="lang-toggle" [class.active]="currentLang === 'en'" (click)="switchLanguage('en')" aria-label="Switch to English">
-        EN
+      <button class="lang-toggle" [class.active]="currentLang === 'fr'" (click)="switchLanguage()" aria-label="Passer en français">
+        {{currentLang === 'fr'? 'EN' : 'FR'}}
       </button>
     </div>
     
@@ -25,12 +22,13 @@
         <i class="fas fa-sun" *ngIf="!isDarkMode"></i>
         <i class="fas fa-moon" *ngIf="isDarkMode"></i>
       </button>
-    </div>
-  </div>
-  <div class="navbar__burger" (click)="toggleMenu()">
+    </div> 
+    <div class="navbar__burger" [class.open]="menuOpen" (click)="toggleMenu()">
     <span></span>
     <span></span>
     <span></span>
   </div>
+  </div>
+ 
   <div class="navbar__overlay" *ngIf="menuOpen" (click)="closeMenu()"></div>
 </nav>

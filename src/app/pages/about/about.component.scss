@@ -64,6 +64,26 @@
   margin-bottom: 0;
 }
 
+.footer__social {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+.footer__social a {
+  color: var(--text-secondary);
+  font-size: 2rem;
+  opacity: 0.9;
+  transition: color 0.2s, opacity 0.2s, transform 0.2s;
+}
+
+.footer__social a:hover {
+  color: var(--accent-color);
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
 .about-main__highlights {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -265,6 +285,7 @@ img, video {
   .about-sections {
     padding: 2rem 1.5rem;
   }
+  
 
   .about-main__title {
     font-size: clamp(1.8rem, 5vw, 2.2rem);
